@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>When — Plans with Friends</title>
+<meta name="description" content="When helps you and your friends find a time everyone is actually free.">
+<meta property="og:title" content="When — Plans with Friends">
+<meta property="og:description" content="Find a time everyone is actually free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://when.social/">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .hero { padding: 5rem 0 1rem; }
+  .hero h1 { font-size: 2.6rem; }
+  .tagline { font-size: 1.2rem; color: var(--ink-soft); margin: 0 0 2rem; max-width: 30rem; }
+  .actions { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; margin-bottom: 1rem; }
+  .how { margin-top: 4.5rem; }
+  .how h2 { border: none; padding-top: 0; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); }
+  .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; counter-reset: s; }
+  .steps li {
+    counter-increment: s;
+    padding-left: 2.75rem;
+    position: relative;
+    margin-bottom: 1.75rem;
+  }
+  .steps li::before {
+    content: counter(s);
+    position: absolute;
+    left: 0; top: 0.05rem;
+    width: 1.85rem; height: 1.85rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--coral);
+    color: var(--coral);
+    font-size: 0.85rem; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps strong { display: block; color: var(--ink); margin-bottom: 0.15rem; }
+  @media (max-width: 480px) { .hero { padding: 3rem 0 1rem; } .hero h1 { font-size: 2.1rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="hero">
+    <span class="mark">When</span>
+    <h1>Find a time everyone<br>is actually free.</h1>
+    <p class="tagline">Stop trading twelve messages to pick a night. Propose a few times, let everyone vote, lock it in.</p>
+    <div class="actions">
+      <a class="btn" href="#">Coming to the App Store</a>
+      <a class="btn-quiet" href="/support">Questions?</a>
+    </div>
+  </section>
+
+  <section class="how">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Propose a few times</strong>When reads your calendar so you only offer times you're actually open.</li>
+      <li><strong>Invite your friends</strong>Send a link, or pick people from your contacts.</li>
+      <li><strong>Everyone votes</strong>No group chat scheduling spiral. Just tap the times that work.</li>
+      <li><strong>Lock it in</strong>The winning time goes on everyone's calendar, and When reminds you before it starts.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <a href="/privacy">Privacy</a><span class="sep">·</span><a href="/support">Support</a>
+  </footer>
+
+</div>
+</body>
+</html>

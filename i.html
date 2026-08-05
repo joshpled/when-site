@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're invited — When</title>
+<meta name="description" content="Someone invited you to make plans on When.">
+<meta property="og:title" content="You're invited on When">
+<meta property="og:description" content="Someone wants to find a time you're both free.">
+<meta property="og:type" content="website">
+<link rel="stylesheet" href="/style.css">
+<style>
+  .invite { padding: 5rem 0 1rem; text-align: center; }
+  .invite h1 { font-size: 2.2rem; }
+  .invite .tagline { font-size: 1.1rem; color: var(--ink-soft); margin: 0 auto 2.25rem; max-width: 26rem; }
+  .invite .btn { margin-bottom: 1.25rem; }
+  .code {
+    display: inline-block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 0.9rem;
+    letter-spacing: 0.08em;
+    color: var(--ink-faint);
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    padding: 0.35rem 0.7rem;
+    margin-top: 0.5rem;
+  }
+  .note { font-size: 0.9rem; color: var(--ink-faint); margin-top: 2rem; }
+  footer { text-align: center; }
+  @media (max-width: 480px) { .invite { padding: 3rem 0 1rem; } .invite h1 { font-size: 1.8rem; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <section class="invite">
+    <span class="mark">When</span>
+    <h1>You're invited</h1>
+    <p class="tagline">Someone wants to find a time you're both free. Get the app to see the plan and vote on times.</p>
+
+    <a class="btn" id="get" href="#">Get When</a>
+
+    <div>
+      <span class="code" id="code" hidden></span>
+    </div>
+
+    <p class="note">Already have When? Tap the invite link again from your phone and it will open in the app.</p>
+  </section>
+
+  <footer>
+    <a href="/">When</a><span class="sep">·</span><a href="/privacy">Privacy</a><span class="sep">·</span><a href="/support">Support</a>
+  </footer>
+
+</div>
+
+<script>
+  (function () {
+    var parts = window.location.pathname.split('/').filter(Boolean);
+    var code = parts.length > 1 ? parts[1] : '';
+    if (code) {
+      var el = document.getElementById('code');
+      el.textContent = 'Invite code: ' + code;
+      el.hidden = false;
+    }
+  })();
+</script>
+</body>
+</html>

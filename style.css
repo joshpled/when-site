@@ -1,0 +1,118 @@
+:root {
+  --ink: #1C1A19;
+  --ink-soft: #55504C;
+  --ink-faint: #8A837D;
+  --rule: #E2DDD7;
+  --paper: #FBFAF8;
+  --coral: #E4674F;
+  --coral-deep: #C94F38;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.wrap {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem 5rem;
+}
+
+.mark {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--coral);
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 0.6rem;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 1.12;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin: 2.75rem 0 0.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--rule);
+  letter-spacing: -0.01em;
+}
+
+h3 { font-size: 1rem; margin: 1.75rem 0 0.4rem; }
+
+p, li { color: var(--ink-soft); }
+p { margin: 0 0 1rem; }
+ul { margin: 0 0 1rem; padding-left: 1.25rem; }
+li { margin-bottom: 0.5rem; }
+strong { color: var(--ink); font-weight: 600; }
+a { color: var(--coral); }
+a:hover { color: var(--coral-deep); }
+
+.lede { font-size: 1.05rem; color: var(--ink); }
+
+.dates { font-size: 0.9rem; color: var(--ink-faint); margin: 0; }
+
+header.doc {
+  border-bottom: 2px solid var(--ink);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.callout {
+  border-left: 3px solid var(--coral);
+  padding: 0.25rem 0 0.25rem 1.1rem;
+  margin: 1.5rem 0;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--coral);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.85rem 1.6rem;
+  border-radius: 999px;
+  transition: background 0.15s ease;
+}
+.btn:hover { background: var(--coral-deep); color: #fff; }
+
+.btn-quiet {
+  display: inline-block;
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+.btn-quiet:hover { color: var(--ink); border-color: var(--ink); }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
+footer a { color: var(--ink-soft); text-decoration: none; }
+footer a:hover { color: var(--coral); }
+footer .sep { margin: 0 0.5rem; color: var(--rule); }
+
+@media (max-width: 480px) {
+  .wrap { padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.6rem; }
+}

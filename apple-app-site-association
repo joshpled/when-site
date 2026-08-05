@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["6HH9MZ5KPY.com.allpurposeapps.when"],
+        "components": [
+          {
+            "/": "/i/*",
+            "comment": "Invite links open in the When app"
+          }
+        ]
+      }
+    ]
+  }
+}
