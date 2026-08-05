@@ -4,11 +4,26 @@
   --ink-faint: #8A837D;
   --rule: #E2DDD7;
   --paper: #FBFAF8;
-  --coral: #E4674F;
-  --coral-deep: #C94F38;
+  /* Sampled from the app icon gradient */
+  --grad-a: #FFAF82;
+  --grad-b: #FB7966;
+  --grad-c: #F368A1;
+  /* Text-safe accent derived from the gradient's pink end (AA on paper and with white) */
+  --coral: #C9345A;
+  --coral-deep: #A82848;
 }
 
 * { box-sizing: border-box; }
+
+/* Brand rule across the top of every page */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--grad-a), var(--grad-b), var(--grad-c));
+  z-index: 10;
+}
 
 html { -webkit-text-size-adjust: 100%; }
 
